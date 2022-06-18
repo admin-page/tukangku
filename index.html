@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav id="navbar" class="navbar">
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"
+            />
+          </svg>
+          <a href="#">TUKANGKU</a>
+        </div>
+        <div class="menu">
+          <div class="btn">
+            <i class="fas fa-times close-btn"></i>
+          </div>
+          <a href="#">Home</a>
+          <a href="#about-us">About US</a>
+          <a href="#services">Services</a>
+          <a href="#">Team</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="btn">
+          <i class="fas fa-bars menu-btn"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- end of header -->
+    <main>
+      <!-- jumbotron -->
+      <section class="jumbotron"></section>
+      <!-- end of jumbotron -->
+
+      <!-- about us -->
+      <section id="about-us" class="container about-us">
+        <div class="title">
+          <h1>ABOUT US</h1>
+        </div>
+        <div class="about-desc">
+          <div class="about-text">
+            <p>
+              <span style="font-weight: 700">Tukangku </span>adalah
+              <em>one-call solution </em>untuk berbagai kebutuhan pemeliharaan
+              dan perbaikan rumah.
+            </p>
+            <p>
+              Pengalaman lebih dari 10 tahun telah memperlengkapi kami untuk
+              terus memberikan karya dan hasil terbaik bagi seluruh pelanggan
+              kami.
+            </p>
+            <p>
+              Tukang-tukang yang selalu <em>up-to-date</em> dengan desain
+              terbaru dan kekinian dapat menyesuaikan dan memberikan saran
+              sesuai dengan kondisi anda.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="assets/image/work.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- end of about us -->
+
+      <!-- services -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="title">
+            <h1>SERVICES</h1>
+          </div>
+          <div class="services-box">
+            <div class="service-card">
+              <img src="assets/image/service1.jpeg" alt="" />
+              <h4>Kitchen Set</h4>
+              <p>
+                Pengalaman lebih dari 10 tahun telah memperlengkapi kami untuk
+                terus memberikan karya dan hasil terbaik bagi seluruh pelanggan
+                kami.
+              </p>
+            </div>
+            <div class="service-card">
+              <img src="assets/image/canopy.jpeg" alt="" />
+              <h4>Canopi Set</h4>
+              <p>
+                Pengalaman lebih dari 10 tahun telah memperlengkapi kami untuk
+                terus memberikan karya dan hasil terbaik bagi seluruh pelanggan
+                kami.
+              </p>
+            </div>
+            <div class="service-card">
+              <img src="assets/image/genteng.jpeg" alt="" />
+              <h4>Roof Set</h4>
+              <p>
+                Pengalaman lebih dari 10 tahun telah memperlengkapi kami untuk
+                terus memberikan karya dan hasil terbaik bagi seluruh pelanggan
+                kami.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>Footer</h1>
+      </section>
+      <!-- end of services -->
+    </main>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        let header = document.getElementById("navbar");
+        header.classList.toggle("sticky", window.scrollY > 0);
+
+        let about = document.getElementById("about-us");
+        about.classList.toggle("scale", window.scrollY > 350);
+      });
+
+      let menu = document.querySelector(".menu");
+      let menuBtn = document.querySelector(".menu-btn");
+      let closeBtn = document.querySelector(".close-btn");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
